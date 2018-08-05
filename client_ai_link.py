@@ -14,6 +14,8 @@ client.listen()
 values = client.values 
 
 # Updates Q-learning model with streamed values, and gets optimized output.
+# TODO: implement proper reward function as input to `reward`.
+# TODO: understand the format of `output` (`action` in brain).
 output = brain.update(reward, values)
 
 # Sends optimized output back to client.
